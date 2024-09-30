@@ -24,7 +24,7 @@ const userSchema = new Schema({
   },
 
   userDocuments: {
-    type: array
+    type: Array
   }
 }
 );
