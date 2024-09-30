@@ -6,7 +6,6 @@ const connectDB = require('./config/dbconfig');
 const {signUp, logIn, tokenAuth, fetchUserById, updateUserById} = require('./controllers/users.controller');
 const jwt = require('jsonwebtoken');
 const app = express();
-const { addCoin, fetchCoin, fetchCoinById, updateCoinById, deleteCoin } = require('./controllers/coins.controller');
 const { authenticateToken } = require("./Util/authMiddleware")
 
 app.use(express.json());
