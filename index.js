@@ -12,6 +12,15 @@ const { authenticateToken } = require("./Util/authMiddleware")
 app.use(express.json());
 app.use(cors());
 
+connectDB();
+
+mongoose.connection.once('open', () => {
+  console.log("Connection established with database");
+  app.listen(PORT, () => {
+    console.log(`Server is running on port ${PORT}`);
+  });
+});
+
 //Sign Up
 app.post('/api/auth/signup', signUp);
 
