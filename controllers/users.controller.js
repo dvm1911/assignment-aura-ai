@@ -6,11 +6,12 @@ const tokenSecretKey = "dd2fe518-149d-4e1e-823a-673335131ce5";
 //Sign Up
 const signUp = async (req, res) => {
   try{
-    const { userName,  userEmail, userPassword } = req.body;
+    const { userName,  userEmail, userPassword, userPfp } = req.body;
     const user = new users({
       userName,
       userEmail,
-      userPassword
+      userPassword,
+      userPfp
     });
     const savedUser = await user.save();
     res.status(201).json({status: 'Success'});
