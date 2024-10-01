@@ -20,8 +20,7 @@ const userSchema = new Schema({
   },
 
   userPfp: {
-    type: String,
-    required: true
+    type: String
   },
 
   userDocuments: {
