@@ -21,6 +21,7 @@ const userSchema = new Schema({
 
   userPfp: {
     type: String,
+    required: true
   },
 
   userDocuments: {
