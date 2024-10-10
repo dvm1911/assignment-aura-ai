@@ -1,7 +1,7 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
-const PORT = 3000;
+const PORT = 4000;
 const connectDB = require('./config/dbconfig');
 const {signUp, logIn, tokenAuth, fetchUserById, updateUserById} = require('./controllers/users.controller');
 const jwt = require('jsonwebtoken');
